@@ -1,0 +1,6 @@
+# Netlify configuration
+# The website lives in the my-corner-of-the-web folder, not at the repo root.
+# Without this publish directory Netlify serves the repo root, finds no index.html,
+# and shows its "Page not found" screen.
+[build]
+  publish = "my-corner-of-the-web"

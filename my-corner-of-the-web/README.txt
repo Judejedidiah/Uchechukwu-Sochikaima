@@ -13,6 +13,14 @@ HOW TO VIEW
 2. Open the my-corner-of-the-web folder.
 3. Double-click index.html, or open the folder in VS Code and use Live Server.
 
+DEPLOYING TO NETLIFY
+The website files are inside the my-corner-of-the-web folder. In Netlify's build
+settings, set the publish directory to "my-corner-of-the-web" (the netlify.toml
+file at the repo root already does this). Without that setting, Netlify looks for
+index.html at the repository root and shows a "Page not found" error. If you are
+using Netlify Drop instead of Git, drag the my-corner-of-the-web folder itself,
+not its parent folder.
+
 IMPORTANT PERSONALISE BEFORE SUBMITTING
 This is a starter example. Change the hobbies and descriptions so they genuinely
 describe you. The portrait on the About page now uses your own photo from the
