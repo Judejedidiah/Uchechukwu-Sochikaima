@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Uchechukwu Sochikaima through the contact page.">
+  <title>Contact | My Corner of the Web</title>
+  <style>
+    /* Internal CSS: every rule for this page lives in this style block. */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #fffefa;
+      color: #26342b;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.18; }
+    .page-width { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
+
+    .site-header {
+      min-height: 78px;
+      padding: 18px max(24px, calc((100% - 1100px) / 2));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid #e6e3d9;
+      background: #fffefa;
+    }
+    .logo { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.7px; }
+    .logo span { color: #d88956; }
+    nav { display: flex; align-items: center; gap: 30px; }
+    nav a { color: #68736a; font-size: .93rem; }
+    nav a:hover, nav a.active { color: #344a38; }
+    nav a.active { font-weight: 700; }
+
+    .eyebrow {
+      margin: 0 0 13px;
+      color: #526b52;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 11px 19px;
+      border: 1px solid transparent;
+      border-radius: 7px;
+      font: inherit;
+      font-size: .92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-dark { background: #344a38; color: white; }
+    .button-dark:hover { background: #263b2b; }
+
+    .inner-page { min-height: calc(100vh - 150px); padding-top: 65px; padding-bottom: 80px; }
+    .page-heading { max-width: 720px; margin-bottom: 55px; }
+    .page-heading h1 { font-size: clamp(2.8rem, 6vw, 4.2rem); letter-spacing: -2.7px; }
+    .page-heading h1 span { color: #526b52; }
+    .page-heading > p:last-child { max-width: 600px; margin-bottom: 0; color: #68736a; font-size: 1.05rem; }
+
+    .contact-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 75px; align-items: start; }
+    .contact-doodle { width: 62px; height: 62px; margin-bottom: 23px; object-fit: contain; filter: drop-shadow(0 4px 6px #26342b22); }
+    .contact-aside h2 { margin-bottom: 18px; font-size: 2rem; letter-spacing: -1px; }
+    .contact-aside p { color: #68736a; }
+    .contact-aside .contact-email { color: #344a38; font-weight: 700; }
+    .small-note, .form-help { font-size: .82rem; }
+
+    .contact-form {
+      display: grid;
+      gap: 17px;
+      max-width: 620px;
+      padding: 28px;
+      border: 1px solid #e6e3d9;
+      border-radius: 10px;
+      background: #f7f5ed;
+    }
+    .contact-form label {
+      display: grid;
+      gap: 7px;
+      color: #354238;
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d6d8cf;
+      border-radius: 8px;
+      background: #fffefa;
+      color: #26342b;
+      font: inherit;
+    }
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid #a8b89b;
+      border-color: #71866d;
+    }
+    .contact-form .button { border: 0; justify-self: start; }
+    .form-help { margin: 0; color: #68736a; }
+
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px max(24px, calc((100% - 1100px) / 2));
+      border-top: 1px solid #e6e3d9;
+      color: #68736a;
+      font-size: .82rem;
+    }
+    .site-footer p { margin: 0; }
+    .site-footer a { color: #344a38; font-weight: 700; }
+
+    @media (max-width: 800px) {
+      .contact-layout { gap: 38px; }
+    }
+    @media (max-width: 600px) {
+      .page-width { width: min(100% - 36px, 480px); }
+      .site-header { min-height: auto; padding: 17px 18px; flex-direction: column; gap: 12px; }
+      nav { width: 100%; justify-content: center; gap: clamp(17px, 6vw, 28px); }
+      nav a { font-size: .88rem; }
+      .inner-page { padding-top: 48px; }
+      .page-heading { margin-bottom: 38px; }
+      .contact-layout { grid-template-columns: 1fr; gap: 30px; }
+      .contact-form { padding: 20px; }
+      .site-footer { padding: 20px 18px; flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">my little space<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About me</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-width inner-page">
+    <section class="page-heading">
+      <p class="eyebrow">Don't be a stranger</p>
+      <h1>Say <span>hello.</span></h1>
+      <p>Have a question, an idea or just want to talk? I'd be happy to hear from you.</p>
+    </section>
+
+    <section class="contact-layout">
+      <div class="contact-aside">
+        <img class="contact-doodle" src="images/envelope.png" alt="" width="62" height="62" aria-hidden="true">
+        <h2>Let's have a conversation.</h2>
+        <p>This is a student practice website. Feel free to reach out using the email below.</p>
+        <p class="contact-email">Odimbaifunanya2016@gmail.com</p>
+        <p class="small-note">Usually around after school 🙂</p>
+      </div>
+
+      <form class="contact-form" action="mailto:Odimbaifunanya2016@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Your name
+          <input type="text" id="name" name="name" placeholder="What should I call you?" required>
+        </label>
+        <label for="email">Your email
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label for="message">Your message
+          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        </label>
+        <button class="button button-dark" type="submit">Send message <span aria-hidden="true">↗</span></button>
+        <p class="form-help">This sample form uses your device's email app. Add a real form service if you want messages sent directly from the website.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Uchechukwu Sochikaima's Corner. Made with care and a little curiosity.</p>
+    <a href="index.html">Back to home ↑</a>
+  </footer>
+</body>
+</html>
